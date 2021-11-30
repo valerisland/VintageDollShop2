@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+// Про Cross Origin Resource Sharing
+// текущий хост: A
+// Хочет сделать запрос к B
+// Браузер обращается к B
+// Спрашивает, откуда можно делать запрос к B
+// *
 
 ReactDOM.render(
   <React.StrictMode>

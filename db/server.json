@@ -1,0 +1,41 @@
+{
+  "cart": [
+  ],
+  "items": [
+    {
+      "id": 1,
+      "title": "Foo bar",
+      "price": 100,
+      "imageSrc": "https://farm8.staticflickr.com/7062/7053816915_8a0a65c3c7_b.jpg",
+      "brief": "Lorem ipsum dolor sit amet"
+    },
+    {
+      "id": 2,
+      "title": "Lorem ipsum",
+      "price": 123,
+      "imageSrc": "https://sobakainfo.ru/wp-content/uploads/2016/11/6-14.jpg",
+      "brief": "Lorem ipsum dolor sit amet"
+    },
+    {
+      "id": 3,
+      "title": "Dolor",
+      "price": 500,
+      "imageSrc": "https://klkfavorit.ru/wp-content/uploads/5/4/e/54ef2ae25328982d8ec84de9bb018bde.jpeg",
+      "brief": "Lorem ipsum dolor sit amet"
+    },
+    {
+      "id": 4,
+      "title": "Sit",
+      "price": 600,
+      "imageSrc": "https://lapkins.ru/upload/uf/55b/55b9fa60a5dbc4abe05fa7abe6564d6b.jpg",
+      "brief": "Lorem ipsum dolor sit amet"
+    },
+    {
+      "id": 5,
+      "title": "Amet",
+      "price": 1000,
+      "imageSrc": "https://klkfavorit.ru/wp-content/uploads/2/9/4/29462647f763bf058bf93f4177501696.jpg",
+      "brief": "Lorem ipsum dolor sit amet"
+    }
+  ]
+}
