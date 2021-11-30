@@ -7,7 +7,31 @@
       "title": "Foo bar",
       "price": 100,
       "imageSrc": "https://farm8.staticflickr.com/7062/7053816915_8a0a65c3c7_b.jpg",
-      "brief": "Lorem ipsum dolor sit amet"
+      "brief": "Lorem ipsum dolor sit amet",
+      "description": [
+        {
+          "type": "text",
+          "text": "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet"
+        },
+        {
+          "type": "checkbox",
+          "name": "check1",
+          "variant": ["asdlasldlsa", "aspqqp", "qweewe"]
+        },
+        {
+          "type": "image",
+          "imageSrc": "https://klkfavorit.ru/wp-content/uploads/2/9/4/29462647f763bf058bf93f4177501696.jpg"
+        },
+        {
+          "type": "checkbox",
+          "name": "check2",
+          "variant": ["Test", "Foo", "Bar"]
+        },
+        {
+          "type": "text",
+          "text": "dasdasd asljdaslj djasnd kjahskd as"
+        }
+      ]
     },
     {
       "id": 2,

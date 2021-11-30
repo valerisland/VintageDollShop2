@@ -35,11 +35,11 @@ class ServerCartService implements CartService {
         let existingItem = currentCart.find(value => value.id === newCartItem.id);
 
         // Если там такой элемент есть (то мы будем его менять)
-        let hasItem: boolean  = existingItem != null;
+        let hasItem: boolean = existingItem != null;
 
         // То нам надо указать этот ID в URL-адресе, для изменения данных
         // Это то как обычно работает REST-протокол и JSON-server
-        let url: string = hasItem ?  `${DATA_URL}/cart/${newCartItem.id}` : `${DATA_URL}/cart`;
+        let url: string = hasItem ? `${DATA_URL}/cart/${newCartItem.id}` : `${DATA_URL}/cart`;
 
         // Если объект такой уже есть и мы его меняем, то метод PUT, если создаём новый, то POST
         let method: string = hasItem ? 'PUT' : 'POST';

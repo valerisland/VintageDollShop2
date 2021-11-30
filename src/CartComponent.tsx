@@ -73,7 +73,7 @@ export function CartComponent() {
 
     return (
         <Container>
-            // Полная цена
+            {/*Полная цена*/}
             <h2>Full price is ${state.fullPrice}</h2>
             <Row>
                 {/*Отрисовываем каждый элемент в корзине*/}
