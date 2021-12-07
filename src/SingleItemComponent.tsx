@@ -73,6 +73,10 @@ export function SingleItemComponent() {
     }
 
     function renderDescriptions(descriptions: Description[]) {
+        if (!descriptions) {
+            return (<div></div>);
+        }
+
         return descriptions.map((description: Description) => {
             if (description.type === "text") {
                 return renderText(description as TextDescription);
