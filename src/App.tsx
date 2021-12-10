@@ -7,6 +7,7 @@ import {CartComponent} from "./CartComponent";
 import {Button, Container, Nav, Navbar} from 'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
+import {faOpencart} from "@fortawesome/free-brands-svg-icons";
 
 /**
  * Главная компонента приложения.
@@ -30,7 +31,7 @@ export function App() {
                             {/*Кнопка корзины*/}
                             <Button variant={"primary"}>
                                 {/*Иконка с корзиной*/}
-                                <FontAwesomeIcon icon={faShoppingCart} />
+                                <FontAwesomeIcon icon={faOpencart} />
                             </Button>
                         </Link>
                     </Nav>

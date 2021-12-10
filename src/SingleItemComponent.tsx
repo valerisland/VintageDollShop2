@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {Button, Col, Container, Form, InputGroup, Row} from "react-bootstrap";
 import {ShopItem} from "./ShopItem";
 import "./SingleItemComponent.scss";
@@ -7,10 +7,12 @@ import {useParams} from "react-router-dom";
 import {cartService} from "./CartService";
 import {cartItemFromShopItem} from "./CartItem";
 import {CheckboxDescription, Description, ImageDescription, TextDescription} from "./Descriptions";
+import {CommentItem} from "./CommentItem";
 
 // Состояние компоненты "Страница товара"
 interface SingleItemComponentState {
     item: ShopItem | null;
+    comments: CommentItem[];
 }
 
 /**
@@ -20,15 +22,25 @@ export function SingleItemComponent() {
     // itemId из URL-адреса. Пример /item/1, itemId == 1
     let {itemId} = useParams();
 
-    let [state, changeState] = useState<SingleItemComponentState>({item: null});
+    let textAreaRef = useRef<HTMLTextAreaElement>(null);
+
+    let [state, changeState] = useState<SingleItemComponentState>({
+        item: null,
+        comments: []
+    });
 
     useEffect(() => {
         // Один раз загружаем информацию о товаре
         if (itemId) {
-            DataServiceInstance.getItem(+itemId).then(value => {
+            let itemPromise = DataServiceInstance.getItem(+itemId);
+
+            let commentsPromise = DataServiceInstance.getAllComments(+itemId);
+
+            Promise.all([itemPromise, commentsPromise]).then(([item, comments]) => {
                 changeState({
-                    item: value
-                });
+                    item: item,
+                    comments: comments
+                })
             });
         }
     }, []);
@@ -88,6 +100,40 @@ export function SingleItemComponent() {
         });
     }
 
+    async function submitComment() {
+        let current: HTMLTextAreaElement | null = textAreaRef.current;
+
+        if (!current) {
+            return;
+        }
+
+        let textContent = current.value;
+
+        if (!textContent) {
+            return;
+        }
+
+        let itemId = state.item?.id;
+
+        if (!itemId) {
+            return;
+        }
+
+        await DataServiceInstance.submitComment(itemId, textContent);
+
+        current.value = "";
+
+        state.comments.push({
+            text: textContent,
+            shopItemId: 0
+        });
+
+        changeState({
+            ...state,
+            comments: state.comments
+        });
+    }
+
     /**
      * Отрисовка элемента
      * @param item
@@ -109,6 +155,31 @@ export function SingleItemComponent() {
                         <h5>Description</h5>
                         {renderDescriptions(item.description)}
                         <span><b>${item.price}</b></span> <Button onClick={() => addToCart()} variant={"success"}>Add to cart</Button>
+                    </Col>
+                </Row>
+
+                <div className="comment-block ">
+                    {
+                        state.comments.map(comment => {
+                            return (
+                                <Row>
+                                    <Col>
+                                        <p className="comment">{comment.text}</p>
+                                    </Col>
+                                </Row>
+                            )
+                        })
+                    }
+                </div>
+
+                <Row>
+                    <Col>
+                        <textarea className="comment-input" ref={textAreaRef}/>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <Button onClick={() => submitComment()}>Submit</Button>
                     </Col>
                 </Row>
             </Container>

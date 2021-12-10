@@ -1,11 +1,11 @@
 {
-  "cart": [
-  ],
+  "cart": [],
   "items": [
     {
       "id": 1,
       "title": "Foo bar",
       "price": 100,
+      "color": "red",
       "imageSrc": "https://farm8.staticflickr.com/7062/7053816915_8a0a65c3c7_b.jpg",
       "brief": "Lorem ipsum dolor sit amet",
       "description": [
@@ -16,7 +16,11 @@
         {
           "type": "checkbox",
           "name": "check1",
-          "variant": ["asdlasldlsa", "aspqqp", "qweewe"]
+          "variant": [
+            "asdlasldlsa",
+            "aspqqp",
+            "qweewe"
+          ]
         },
         {
           "type": "image",
@@ -25,7 +29,11 @@
         {
           "type": "checkbox",
           "name": "check2",
-          "variant": ["Test", "Foo", "Bar"]
+          "variant": [
+            "Test",
+            "Foo",
+            "Bar"
+          ]
         },
         {
           "type": "text",
@@ -36,6 +44,7 @@
     {
       "id": 2,
       "title": "Lorem ipsum",
+      "color": "red",
       "price": 123,
       "imageSrc": "https://sobakainfo.ru/wp-content/uploads/2016/11/6-14.jpg",
       "brief": "Lorem ipsum dolor sit amet"
@@ -43,6 +52,7 @@
     {
       "id": 3,
       "title": "Dolor",
+      "color": "blue",
       "price": 500,
       "imageSrc": "https://klkfavorit.ru/wp-content/uploads/5/4/e/54ef2ae25328982d8ec84de9bb018bde.jpeg",
       "brief": "Lorem ipsum dolor sit amet"
@@ -50,6 +60,7 @@
     {
       "id": 4,
       "title": "Sit",
+      "color": "black",
       "price": 600,
       "imageSrc": "https://lapkins.ru/upload/uf/55b/55b9fa60a5dbc4abe05fa7abe6564d6b.jpg",
       "brief": "Lorem ipsum dolor sit amet"
@@ -57,9 +68,57 @@
     {
       "id": 5,
       "title": "Amet",
+      "color": "black",
       "price": 1000,
       "imageSrc": "https://klkfavorit.ru/wp-content/uploads/2/9/4/29462647f763bf058bf93f4177501696.jpg",
       "brief": "Lorem ipsum dolor sit amet"
+    }
+  ],
+  "comments": [
+    {
+      "shopItemId": 2,
+      "text": "Very nice!",
+      "id": 1
+    },
+    {
+      "shopItemId": 2,
+      "text": "sdadsasd",
+      "id": 2
+    },
+    {
+      "shopItemId": 2,
+      "text": "sdkfmsdlkf",
+      "id": 3
+    },
+    {
+      "shopItemId": 2,
+      "text": "asdasd",
+      "id": 4
+    },
+    {
+      "shopItemId": 2,
+      "text": "asdasdq312312",
+      "id": 5
+    },
+    {
+      "shopItemId": 2,
+      "text": "34123123123asdasd",
+      "id": 6
+    },
+    {
+      "shopItemId": 2,
+      "text": "slkdjalksdl",
+      "id": 7
+    },
+    {
+      "shopItemId": 3,
+      "text": "asdasdmaslkd",
+      "id": 8
+    },
+    {
+      "shopItemId": 3,
+      "text": "asdad;q3le23",
+      "id": 9
     }
   ]
 }
