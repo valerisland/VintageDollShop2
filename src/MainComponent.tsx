@@ -47,20 +47,20 @@ export function MainComponent() {
       <Container>
           <Row>
               <Col xs={3}>
-                  <Form.Select className="color-select" onChange={event => onColorInputChange(event)}>
+                  <Form.Select defaultValue={""} className="color-select" onChange={event => onColorInputChange(event)}>
                       {
                           Object.keys(ItemColor).map(color => {
                             // @ts-ignore
                             let humanReadable = ItemColor[color]
 
                             return (
-                                <option value={color}>
+                                <option key={color} value={color}>
                                     {humanReadable}
                                 </option>
                             );
                           })
                       }
-                      <option selected value="">All</option>
+                      <option value="">All</option>
                   </Form.Select>
               </Col>
           </Row>
