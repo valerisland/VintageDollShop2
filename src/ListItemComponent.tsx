@@ -5,6 +5,15 @@ import "./ListItemComponent.scss";
 import {Link} from "react-router-dom";
 import {cartService} from "./CartService";
 import {cartItemFromShopItem} from "./CartItem";
+import {faOpencart} from "@fortawesome/free-brands-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {
+    faGlobe,
+    faGlobeAmericas,
+    faGlobeEurope,
+    faLocationArrow,
+    faSearchLocation
+} from "@fortawesome/free-solid-svg-icons";
 
 /**
  * Входные параметры компоненты "элемент списка на главной странице"
@@ -27,19 +36,26 @@ export function ListItemComponent(props: ListItemComponentProps) {
     }
 
     return (
-        <Card className={"list-item"} style={{ width: '18rem' }}>
-            <Card.Img style={{height: 242}} variant="top" src={item.imageSrc} />
-            <Card.Body>
+        <Card className={"list-item"} style={{ width: '18rem', borderColor: "white"}}>
+            <Card.Img  src={item.imageSrc} className="card-image"/>
+            <Card.Body className="card-body">
                 <Card.Title>
-                    <Link to={"/item/" + item.id}>
+                    <Link className="item-name" to={"/item/" + item.id}>
                         {item.title}
                     </Link>
                 </Card.Title>
-                <Card.Text>
-                    {item.brief}
+                <Card.Text style={{marginBottom: 5}}>
+                    Condition: {item.condition_text}
                 </Card.Text>
-                <span><b>${item.price}</b></span>
-                <div className="add-to-cart"><Button onClick={() => addToCart(item)} variant="success">Add to cart</Button></div>
+                <Card.Text style={{marginBottom: 5}}>
+                    Year: {item.year}
+                </Card.Text>
+                <Card.Text>
+                    <FontAwesomeIcon icon={faGlobeAmericas} />  {item.sellerLocation}
+                </Card.Text>
+                <div><b style={{fontSize: '24px'}}>${item.price} <b style={{marginLeft: 90}} className="add-to-cart"><Button onClick={() => addToCart(item)} variant="custom">Add to cart</Button></b></b></div>
+
+
             </Card.Body>
         </Card>
     );

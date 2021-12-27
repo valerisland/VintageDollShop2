@@ -1,7 +1,34 @@
 .list-item {
   margin-bottom: 15px;
+  box-shadow: 4px 8px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 
   .add-to-cart {
     text-align: end;
+    color:pink;
   }
 }
+
+.card-image{
+  margin-left: auto;
+  margin-right: auto;
+  height: 250px;
+  //max-height: 250px;
+  width: auto;
+  max-width: 250px;
+}
+
+.btn-custom{
+  background-color: #EC8299;
+  color: white;
+}
+
+.item-name{
+  color: #282c34;
+  text-decoration: none;
+}
+
+//.card-body{
+//  position:absolute;
+//  bottom:0;
+//}

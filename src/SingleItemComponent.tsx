@@ -3,11 +3,13 @@ import {Button, Col, Container, Form, InputGroup, Row} from "react-bootstrap";
 import {ShopItem} from "./ShopItem";
 import "./SingleItemComponent.scss";
 import {DataServiceInstance} from "./DataService";
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {cartService} from "./CartService";
 import {cartItemFromShopItem} from "./CartItem";
 import {CheckboxDescription, Description, ImageDescription, TextDescription} from "./Descriptions";
 import {CommentItem} from "./CommentItem";
+import {faArrowLeft, faGlobeAmericas} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 // Состояние компоненты "Страница товара"
 interface SingleItemComponentState {
@@ -61,6 +63,7 @@ export function SingleItemComponent() {
           <p>{desc.text}</p>
         );
     }
+
 
     function renderImage(desc: ImageDescription) {
         return (
@@ -146,42 +149,24 @@ export function SingleItemComponent() {
         return (
             <Container>
                 <Row>
-                    <Col>
-                        <img className={"item-image"} src={item.imageSrc}/>
+                    <Col style={{marginTop:24}}>
+                        <Link className={"backLink"} to={"/"}>
+                            <FontAwesomeIcon icon={faArrowLeft} /> Back to Dolls
+                        </Link>
+                        <p><img className={"item-image"} src={item.imageSrc}/></p>
                     </Col>
-                    <Col>
-                        <h1>{item.title}</h1>
-                        <p>Brief: {item.brief}</p>
-                        <h5>Description</h5>
-                        {renderDescriptions(item.description)}
-                        <span><b>${item.price}</b></span> <Button onClick={() => addToCart()} variant={"success"}>Add to cart</Button>
+                    <Col style={{marginTop:56}}>
+                        <h2 style={{marginBottom: 48}}>{item.title}</h2>
+                        <p><b>Condition: </b>{item.condition_text}</p>
+                        <p><b>Year: </b> {item.year}</p>
+                        <p><b>Seller location: </b>{item.sellerLocation}</p>
+                        <b>Description </b>
+                        <p style={{marginBottom:36}}>{item.brief}</p>
+
+                        <span><b style={{fontSize:24}}>${item.price}</b></span> <Button style={{marginLeft: 16}} onClick={() => addToCart()} variant="custom">Add to cart</Button> <Link style={{marginLeft: 16}} to={"/cart"}>Go to Cart</Link>
                     </Col>
                 </Row>
 
-                <div className="comment-block ">
-                    {
-                        state.comments.map(comment => {
-                            return (
-                                <Row>
-                                    <Col>
-                                        <p className="comment">{comment.text}</p>
-                                    </Col>
-                                </Row>
-                            )
-                        })
-                    }
-                </div>
-
-                <Row>
-                    <Col>
-                        <textarea className="comment-input" ref={textAreaRef}/>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <Button onClick={() => submitComment()}>Submit</Button>
-                    </Col>
-                </Row>
             </Container>
         );
     }

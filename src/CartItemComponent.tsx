@@ -1,9 +1,11 @@
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {ShopItem} from "./ShopItem";
 import {DataServiceInstance} from "./DataService";
-import {CartItem} from "./CartItem";
+import {CartItem, cartItemFromShopItem} from "./CartItem";
 import "./CartItemComponent.scss";
-import {Card, Col, Row} from "react-bootstrap";
+import {Button, Card, Col, Row} from "react-bootstrap";
+import {cartService} from "./CartService";
+
 
 
 // Входные данные компоненты элемента корзины
@@ -17,6 +19,8 @@ interface CartItemComponentState {
     // Товар
     item: ShopItem | null;
 }
+
+
 
 // Компонента элемента корзины
 export function CartItemComponent(props: CartItemComponentProps) {
@@ -33,20 +37,21 @@ export function CartItemComponent(props: CartItemComponentProps) {
         });
     }, []);
 
+
     return (
         <Card className="cart-item">
             <Row>
                 <Col xs={4}>
-                    <img className="img-fluid rounded-start" src={state.item?.imageSrc}/>
+                    <img  src={state.item?.imageSrc}/>
                 </Col>
                 <Col xs={8}>
                     <Card.Body>
                         <Card.Title>{state.item?.title}</Card.Title>
                         <Card.Text>
-                            <div>
-                                Quantity: {props.cartItem.quantity}
+                            <div style={{marginTop: 40}}>
+                                Quantity: <b>{props.cartItem.quantity}</b>
                             </div>
-                            <div>
+                            <div style={{marginTop: 16}}>
                                 {
                                 // То же самое что
                                 // let itemPrice = 0;
@@ -57,8 +62,9 @@ export function CartItemComponent(props: CartItemComponentProps) {
                                 // Price: ${itemPrice}
                                 }
 
-                                Price: ${props.cartItem.quantity * (state.item?.price ?? 0)}
+                                Price: <b>${props.cartItem.quantity * (state.item?.price ?? 0)}</b>
                             </div>
+
                         </Card.Text>
                     </Card.Body>
                 </Col>

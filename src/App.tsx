@@ -6,8 +6,8 @@ import {SingleItemComponent} from "./SingleItemComponent";
 import {CartComponent} from "./CartComponent";
 import {Button, Container, Nav, Navbar} from 'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
-import {faOpencart} from "@fortawesome/free-brands-svg-icons";
+import {faDolly, faPersonBooth, faShoppingCart} from "@fortawesome/free-solid-svg-icons";
+import {faFly, faOpencart} from "@fortawesome/free-brands-svg-icons";
 
 /**
  * Главная компонента приложения.
@@ -16,22 +16,24 @@ export function App() {
 
     return (
         // В корне приложения -- роутер, который "отрисовывает" нужную компоненту в зависимости от URL
+        <div style={{backgroundColor: "aliceblue"}}>
         <BrowserRouter>
             {/*Часть, которая рисуется всегда -- хедер страницы*/}
-            <Navbar bg="dark" variant="dark">
+            <Navbar bg="white" variant="light">
                 <Container>
-                    <Navbar.Brand href="/">Dog Shop</Navbar.Brand>
+
+                    <Navbar.Brand className="siteName" href="/">Vintage Doll Shop</Navbar.Brand>
                     <Nav className="me-auto">
                         {/*Ссылка перехода на главную страницу*/}
-                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/">Dolls</Nav.Link>
                     </Nav>
                     <Nav className="justify-content-end">
                         {/*Ссылка для перехода в корзину*/}
                         <Link to={"/cart"}>
                             {/*Кнопка корзины*/}
-                            <Button variant={"primary"}>
+                            <Button variant={"custom-2"}>
                                 {/*Иконка с корзиной*/}
-                                <FontAwesomeIcon icon={faOpencart} />
+                                <FontAwesomeIcon icon={faShoppingCart} />
                             </Button>
                         </Link>
                     </Nav>
@@ -48,6 +50,7 @@ export function App() {
                 <Route path={"cart"} element={<CartComponent/>}/>
             </Routes>
         </BrowserRouter>
+        </div>
     );
 }
 

@@ -19,3 +19,4 @@ export function cartItemFromShopItem(shopItem: ShopItem) : CartItem {
         id: shopItem.id, quantity: 1
     };
 }
+

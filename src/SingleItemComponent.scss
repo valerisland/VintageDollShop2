@@ -1,7 +1,16 @@
 .item-image, .description-image {
-  width: 100%
+  height: auto;
+  //max-height: 250px;
+  width: auto;
+  max-width: 600px;
+  margin-top:18px;
 }
 
+.backLink{
+  color: dimgrey;
+  //font-weight: bold;
+  text-decoration: none;
+}
 .comment-block {
   margin-top: 15px;
 }
@@ -15,4 +24,8 @@
   maring: 10px;
   font-size: 20px;
   padding: 15px;
+}
+
+.priceButton{
+
 }

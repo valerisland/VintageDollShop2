@@ -6,6 +6,7 @@ import {CartItemComponent} from "./CartItemComponent";
 import {DataServiceInstance} from "./DataService";
 import {ShopItem} from "./ShopItem";
 
+
 /**
  * Состояние компоненты с корзиной.
  * Заполняется на основе ответа на запрос к серверу или из localstorage.
@@ -72,23 +73,28 @@ export function CartComponent() {
     }, []);
 
     return (
-        <Container>
-            {/*Полная цена*/}
-            <h2>Full price is ${state.fullPrice}</h2>
-            <Row>
+        <Container style={{marginTop:36}}>
+<Row>
+            <Col xs={12} md={8}>
+                <Row>
                 {/*Отрисовываем каждый элемент в корзине*/}
                 {
                     state.cartItems.map((item) => {
                         return (
-                            <Col xs={3}>
+                            <Row>
                                 <CartItemComponent cartItem={item}/>
-                            </Col>
+                            </Row>
                         );
                     })
                 }
             </Row>
-            {/*Просто кнопка-заглушка*/}
-            <Button variant="success">Proceed to checkout</Button>
+            </Col>
+            <Col>            {/*Полная цена*/}
+                <h3>Order details</h3>
+                <p style = {{fontSize:24}}>Total: <b>${state.fullPrice}</b></p>
+                <Button variant="custom">Proceed to checkout</Button>
+            </Col>
+</Row>
         </Container>
     );
 }

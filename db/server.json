@@ -3,122 +3,91 @@
   "items": [
     {
       "id": 1,
-      "title": "Foo bar",
-      "price": 100,
-      "color": "red",
-      "imageSrc": "https://farm8.staticflickr.com/7062/7053816915_8a0a65c3c7_b.jpg",
-      "brief": "Lorem ipsum dolor sit amet",
-      "description": [
-        {
-          "type": "text",
-          "text": "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet"
-        },
-        {
-          "type": "checkbox",
-          "name": "check1",
-          "variant": [
-            "asdlasldlsa",
-            "aspqqp",
-            "qweewe"
-          ]
-        },
-        {
-          "type": "image",
-          "imageSrc": "https://klkfavorit.ru/wp-content/uploads/2/9/4/29462647f763bf058bf93f4177501696.jpg"
-        },
-        {
-          "type": "checkbox",
-          "name": "check2",
-          "variant": [
-            "Test",
-            "Foo",
-            "Bar"
-          ]
-        },
-        {
-          "type": "text",
-          "text": "dasdasd asljdaslj djasnd kjahskd as"
-        }
-      ]
+      "title": "Barbie Fairytopia Elina ",
+      "price": 59,
+      "year": 2004,
+      "condition": "newInBox",
+      "condition_text": "New In Box",
+      "sellerLocation": "Canada, Ontario",
+      "imageSrc": "https://i.pinimg.com/originals/4e/91/17/4e91174f1662ab69403681b2c3b80f99.jpg",
+      "brief": "Barbie Doll Elina from Barbie Fairytopia movie. Comes with a little cute Bibble and lightning wings. Never taken out of the box. Box is in very good condition too."
     },
     {
       "id": 2,
-      "title": "Lorem ipsum",
-      "color": "red",
-      "price": 123,
-      "imageSrc": "https://sobakainfo.ru/wp-content/uploads/2016/11/6-14.jpg",
-      "brief": "Lorem ipsum dolor sit amet"
+      "title": "Barbie Dance’n’Flex",
+      "condition": "usedNoBox",
+      "condition_text": "Used No Box",
+      "price": 30,
+      "year": 2002,
+      "sellerLocation": "France, Ontario",
+      "imageSrc": "https://cf.shopee.ph/file/f4f163011aef68706a946020c67ad78e",
+      "brief": "She is in good played with condition, could use a cleaning, some tiny markings here and there, she is a bit dirty, everything still bends, no neck split. Her top needs some mending, her pants has faded, her purse has some small markings."
     },
     {
       "id": 3,
-      "title": "Dolor",
-      "color": "blue",
-      "price": 500,
-      "imageSrc": "https://klkfavorit.ru/wp-content/uploads/5/4/e/54ef2ae25328982d8ec84de9bb018bde.jpeg",
-      "brief": "Lorem ipsum dolor sit amet"
+      "title": "Barbie Rapunzel",
+      "condition": "newInBox",
+      "condition_text": "New In Box",
+      "price": 75,
+      "year": 2003,
+      "sellerLocation": "USA, Washington",
+      "imageSrc": "https://m.media-amazon.com/images/I/71d20Kio77L._AC_SL1500_.jpg",
+      "brief": "Rapunzel - Long long ago, and a time of magic and dragons, there lived a young maiden name Rapunzel who had beautiful, long flowing hair. And trapped and the enchanted tower, Rapunzel escapes in Time to save two kingdoms. Barbie as Rapunzel and Pennelope doll - Relive the beauty with Barbie dolls fairy tale collection!\n\nDoll is brand new in box... Excellent condition. Never opened or removed from box and has been stored in a smoke free environment."
     },
     {
       "id": 4,
-      "title": "Sit",
-      "color": "black",
-      "price": 600,
-      "imageSrc": "https://lapkins.ru/upload/uf/55b/55b9fa60a5dbc4abe05fa7abe6564d6b.jpg",
-      "brief": "Lorem ipsum dolor sit amet"
+      "title": "Barbie Matinee Today",
+      "condition": "newInBox",
+      "condition_text": "New In Box",
+      "price": 90,
+      "year": 1996,
+      "sellerLocation": "Russia, Moscow",
+      "imageSrc": "https://i.ebayimg.com/images/g/8OQAAOSwuAVW0ORE/s-l300.jpg",
+      "brief": "Gift your little one the ‘Matinee Today Barbie’ doll by Mattel, and see a lovely smile light up her face. This 1996 Barbie sports a beautiful, short pink jacket and skirt, making her very attractive. The black colored hand bag along with the stocking and matching pumps of the ‘Matinee Today Barbie’ give her a stylish and elegant look. The black and white punk hairstyle of this doll by Mattel enhances her appeal. With well-matched accessories, this doe eyed 1996 Barbie is sure to keep your child entertained for days if not months."
     },
     {
       "id": 5,
-      "title": "Amet",
-      "color": "black",
-      "price": 1000,
-      "imageSrc": "https://klkfavorit.ru/wp-content/uploads/2/9/4/29462647f763bf058bf93f4177501696.jpg",
-      "brief": "Lorem ipsum dolor sit amet"
-    }
-  ],
-  "comments": [
-    {
-      "shopItemId": 2,
-      "text": "Very nice!",
-      "id": 1
+      "title": "Barbie Happy Family Midge",
+      "condition": "newInBox",
+      "condition_text": "New In Box",
+      "price": 76,
+      "year": 2002,
+      "sellerLocation": "Spain, Barcelona",
+      "imageSrc": "https://i.ebayimg.com/images/g/3gsAAOSwz9Rhvgs1/s-l1600.jpg",
+      "brief": "The box shows some wear and looks like the baby has come a loose in the box.\n\nBox has never been opened."
     },
     {
-      "shopItemId": 2,
-      "text": "sdadsasd",
-      "id": 2
+      "id": 6,
+      "title": "Barbie Mermaidia Elina",
+      "condition": "usedNoBox",
+      "condition_text": "Used No Box",
+      "price": 25,
+      "year": 2005,
+      "sellerLocation": "USA, New York",
+      "imageSrc": "https://i.ebayimg.com/images/g/9dgAAOSwYXphHV9R/s-l1600.jpg",
+      "brief": "Approx 12 inches high\n\nThe butterfly wings can be pushed down to look like picture 3 and she has a button on her necklace which when pressed will make the wings spring back up\n\nIn a good but played with condition - Please note this is for the doll only as in the picture, she originally came with a skirt we no longer have it - her hair is a little matted at the back  as a lot of Barbie dolls do\n\ncomes as seen in picture with no original packaging or accessories other than pictured"
     },
     {
-      "shopItemId": 2,
-      "text": "sdkfmsdlkf",
-      "id": 3
+      "id": 7,
+      "title": "Barbie Wedding Fantasy",
+      "condition": "newInBox",
+      "condition_text": "New In Box",
+      "price": 19,
+      "year": 1989,
+      "sellerLocation": "USA, New Jersey",
+      "imageSrc": "https://i.ebayimg.com/images/g/zAYAAOSwXFxgkI88/s-l1600.jpg",
+      "brief": "Barbie 2125 1989 Wedding Fantasy Doll"
     },
     {
-      "shopItemId": 2,
-      "text": "asdasd",
-      "id": 4
-    },
-    {
-      "shopItemId": 2,
-      "text": "asdasdq312312",
-      "id": 5
-    },
-    {
-      "shopItemId": 2,
-      "text": "34123123123asdasd",
-      "id": 6
-    },
-    {
-      "shopItemId": 2,
-      "text": "slkdjalksdl",
-      "id": 7
-    },
-    {
-      "shopItemId": 3,
-      "text": "asdasdmaslkd",
-      "id": 8
-    },
-    {
-      "shopItemId": 3,
-      "text": "asdad;q3le23",
-      "id": 9
+      "id": 8,
+      "title": "Barbie TNT Twiggy Doll",
+      "condition": "dollOnly",
+      "condition_text": "Doll Only",
+      "price": 76,
+      "year": 1967,
+      "sellerLocation": "Canada, Wellington",
+      "imageSrc": "https://i.ebayimg.com/images/g/skYAAOSwe7BggySq/s-l1600.jpg",
+      "brief": "Excellent condition no green ear. Legs bend and hold 2 positions each. Body needs a cleaning. Full eyelashes. Great display doll."
     }
   ]
 }

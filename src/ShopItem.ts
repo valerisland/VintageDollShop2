@@ -3,10 +3,10 @@
  */
 import {Description} from "./Descriptions";
 
-export enum ItemColor {
-    red = "Red",
-    blue = "Blue",
-    black = "Black"
+export enum ItemCondition {
+    newInBox = "New In Box",
+    usedNoBox = "Used No Box",
+    dollOnly = "Doll only"
 }
 
 export class ShopItem {
@@ -35,10 +35,16 @@ export class ShopItem {
      */
     public brief: string;
 
+    public year: string;
+
+    public sellerLocation: string;
+
+    public condition_text: string;
+
     /**
      * Цвет.
      */
-    public color: ItemColor;
+    public condition: ItemCondition;
 
     /**
      * Полное описание.
@@ -51,15 +57,21 @@ export class ShopItem {
         price: number,
         imageSrc: string,
         brief: string,
+        year: string,
+        sellerLocation: string,
         description: Description[],
-        color: ItemColor
+        condition: ItemCondition,
+        condition_text: string
     ) {
         this.id = id;
         this.title = title;
         this.price = price;
         this.imageSrc = imageSrc;
         this.brief = brief;
+        this.year = year;
+        this.sellerLocation = sellerLocation;
         this.description = description;
-        this.color = color;
+        this.condition = condition;
+        this.condition_text = condition_text;
     }
 }
